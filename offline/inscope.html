@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf8'>
+  <link rel='stylesheet' type='text/css' href='main.css'>
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Special+Elite'>
+</head>
+<body>
+  <h1>Service Worker sample</h1>
+  <p>ServiceWorker を使ってページをキャッシュするサンプルです。</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/240px-HTML5_logo_and_wordmark.svg.png" />
+  <img src="html5j.png" />
+  <p id="log"></p>
+<script>
+function log(msg) {
+  document.querySelector('#log').textContent += msg;
+}
+if (navigator.serviceWorker.controller) {
+  log('このページは ServiceWorker にコントロールされています');
+} else {
+  log('ServiceWorker はいません');
+}
+</script>
+</body>
